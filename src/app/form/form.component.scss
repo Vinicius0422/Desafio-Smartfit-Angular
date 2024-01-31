@@ -57,6 +57,16 @@
     margin-top: 2.5rem;
     gap: 0.7rem;
     color: var(--dark-grey);
+    position: relative;
+}
+
+.form-container .show-closed-container span{
+    position: absolute;
+    right: 0;
+}
+
+.form-container .show-closed-container span > b{
+    font-size: 1.2rem;
 }
 
 .form-container .button-form{
