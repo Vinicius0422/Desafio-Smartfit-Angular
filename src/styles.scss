@@ -1,3 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham';
+}
+
 :root {
     --dark-grey: #333333;
     --light-grey: #808080;
@@ -5,7 +12,6 @@
     --red: #dc0a17;
     --green: #2FC022;
 }
-
 
 @font-face {
     font-family: 'Gotham';
