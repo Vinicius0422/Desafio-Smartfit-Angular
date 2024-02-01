@@ -1,39 +1,41 @@
-<form action="" class="form-container">
-        <div class="form-icon">
-            <img src="../../assets/images/icon-hour.png" alt="icon-hour">
-            <span>Horário</span>
+<form class="form-container" [formGroup]="formGroup">
+    <div class="form-icon">
+        <img src="../../assets/images/icon-hour.png" alt="icon-hour">
+        <span>Horário</span>
+    </div>
+    <h2>Qual período quer treinar?</h2>
+    <ul class="schedules">
+        <li>
+            <div>
+                <input type="radio" name="hour" value="morning" formControlName="hour" />
+                <label for="hour">Manhã</label>
+            </div>
+            <span>06:00 às 12:00</span>
+        </li>
+        <li>
+            <div>
+                <input type="radio" name="hour" value="afternoon" formControlName="hour" />
+                <label for="hour">Tarde</label>
+            </div>
+            <span>12:01 às 18:00</span>
+        </li>
+        <li>
+            <div>
+                <input type="radio" name="hour" value="night" formControlName="hour" />
+                <label for="hour">Noite</label>
+            </div>
+            <span>18:01 às 23:00</span>
+        </li>
+    </ul>
+    <div class="show-closed-container">
+        <div class="checkbox">
+            <input type="checkbox" name="showClosed" formControlName="showClosed" />
+            <label for="showClosed">Exibir unidades fechadas</label>
         </div>
-        <h2>Qual período quer treinar?</h2>
-        <ul class="schedules">
-            <li>
-                <div>
-                    <input type="radio" name="morning" value="morning" />
-                    <label for="morning">Manhã</label>
-                </div>
-                <span>06:00 às 12:00</span>
-            </li>
-            <li>
-                <div>
-                    <input type="radio" name="afternoon" value="afternoon" />
-                    <label for="afternoon">Tarde</label>
-                </div>
-                <span>12:01 às 18:00</span>
-            </li>
-            <li>
-                <div>
-                    <input type="radio" name="night" value="night" />
-                    <label for="night">Noite</label>
-                </div>
-                <span>18:01 às 23:00</span>
-            </li>
-        </ul>
-        <div class="show-closed-container">
-            <input type="checkbox" name="show-closed" />
-            <label for="show-closed">Exibir unidades fechadas</label>
-            <span>Resultados encontrados: <b>{{results.length}}</b></span>
-        </div>
-        <div class="button-form">
-            <button>Encontrar unidade</button>
-            <button>Limpar</button>
-        </div>
+        <span>Resultados encontrados: <b>{{results.length}}</b></span>
+    </div>
+    <div class="button-form">
+        <button type="submit" (click)="onSubmit()">Encontrar unidade</button>
+        <button (click)="onClean()">Limpar</button>
+    </div>
 </form>
