@@ -7,13 +7,13 @@ import { BehaviorSubject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { Location } from './types/location.interface';
 import { GetUnitsService } from './services/get-units.service';
-import { CardComponent } from './components/card/card.component';
 import { LegendComponent } from './components/legend/legend.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HeaderComponent, FormComponent, CardsListComponent, LegendComponent],
+  imports: [RouterOutlet, CommonModule, HeaderComponent, FormComponent, CardsListComponent, LegendComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
