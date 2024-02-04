@@ -1,5 +1,6 @@
 
 <app-header></app-header>
-<app-forms></app-forms>
+<app-forms (submitEvent)="onSubmit()"></app-forms>
+<app-card-list *ngIf="showList | async" [unitsList]="unitsList"></app-card-list>
 <router-outlet />
 

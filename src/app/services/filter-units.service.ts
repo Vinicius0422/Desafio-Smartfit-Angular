@@ -54,7 +54,7 @@ export class FilterUnitsService {
           let unit_open_hour_int = parseInt(unit_open_hour.replace('h', ''), 10)
           let unit_close_hour_int = parseInt(unit_close_hour.replace('h', ''), 10)
 
-          if((unit_open_hour_int <= open_hour_filter || unit_open_hour_int < close_hour_filter) && unit_close_hour_int >= close_hour_filter || unit_close_hour_int >= open_hour_filter) return true
+          if((unit_open_hour_int <= open_hour_filter || unit_open_hour_int < close_hour_filter) && unit_close_hour_int > close_hour_filter || unit_close_hour_int >= open_hour_filter) return true
           else return false
         }
       }
