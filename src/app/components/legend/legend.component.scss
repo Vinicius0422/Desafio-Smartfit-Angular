@@ -1,0 +1,136 @@
+.legends{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background-color: var(--background);
+    gap: 1.5rem;
+    padding: 4rem 1rem;
+}
+
+
+.legends li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.legends li h3{
+    font-size: 1.7rem;
+}
+
+.content-legend{
+    display: flex;
+    gap: 1rem;
+}
+
+.content-legend div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content-legend div img{
+    height: 6rem;
+}
+
+.content-legend  div span{
+    font-size: 1.6rem;
+}
+
+.legends li:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 960px) {
+
+    .legends{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .legends li h3{
+        font-size: 1rem;
+    }
+
+    .content-legend{
+        gap: 0.6rem;
+    }
+    
+    .content-legend div{
+        gap: 0.6rem;
+    }
+
+    .content-legend div img{
+        height: 3.5rem;
+    }
+
+    .content-legend  div span{
+        font-size: 0.9rem;
+    }
+
+    .legends li:not(:last-child){
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .legends li h3{
+        font-size: 1.3rem;
+    }
+
+    .content-legend{
+        gap: 1rem;
+    }
+    
+    .content-legend div{
+        gap: 1rem;
+    }
+
+    .content-legend div img{
+        height: 4rem;
+    }
+
+    .content-legend  div span{
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 1350px) {
+
+    .legends li h3{
+        font-size: 1.4rem;
+    }
+
+    .content-legend div img{
+        height: 4.5rem;
+    }
+
+    .content-legend  div span{
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .legends li h3{
+        font-size: 1.6rem;
+    }
+
+    .content-legend div img{
+        height: 5.5rem;
+    }
+
+    .content-legend  div span{
+        font-size: 1.5rem;
+    }
+}
